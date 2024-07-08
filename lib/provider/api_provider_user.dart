@@ -10,7 +10,7 @@ class ApiProviderUser with ChangeNotifier {
   // REQUEST - VALIDATE CREDENTIALS
   Future<Map<String, dynamic>> loginUser(String username, String password) async {
     final response = await http.post(
-      Uri.parse('https://9vq3w22t-8080.use2.devtunnels.ms/api/v1/hermes/auth/user/login'),
+      Uri.parse('https://3ggvt1qf-8080.use2.devtunnels.ms/api/v1/hermes/auth/user/login'),
       headers: { 'Content-Type': 'application/json',},
       body: json.encode({
         "username": username,
@@ -31,7 +31,7 @@ class ApiProviderUser with ChangeNotifier {
   // REQUEST - DATA USER
   Future<Map<String, dynamic>> dataUser(String userName, String token) async {
     final response = await http.post(
-      Uri.parse('https://9vq3w22t-8080.use2.devtunnels.ms/api/v1/hermes/user/people/$userName'),
+      Uri.parse('https://3ggvt1qf-8080.use2.devtunnels.ms/api/v1/hermes/user/people/$userName'),
       headers: {
         'Content-Type': 'application/json',
         'Authorization': 'Bearer $token',
